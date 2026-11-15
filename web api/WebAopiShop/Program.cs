@@ -14,6 +14,8 @@ using System.Threading.RateLimiting;
 
 
 var builder = WebApplication.CreateBuilder(args);
+// Local secrets (Redis password, JWT key) live in appsettings.Local.json, which is not committed.
+builder.Configuration.AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: true);
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();

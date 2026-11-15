@@ -4,7 +4,7 @@ services:
     container_name: webapi-redis-1
     ports:
       - "6379:6379"
-    command: redis-server --requirepass yt215966060
+    command: redis-server --requirepass ${REDIS_PASSWORD}
     restart: unless-stopped
 
   zookeeper:
