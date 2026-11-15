@@ -51,6 +51,15 @@ API-Angular-Project/
 
 ## Getting Started
 
+### 0. Configure local secrets
+
+Secrets are not stored in the repository.
+
+1. Copy `.env.example` to `.env` and set `REDIS_PASSWORD` (used by `docker compose`).
+2. Copy `web api/WebAopiShop/appsettings.Local.example.json` to `appsettings.Local.json` in the same folder, and set the same Redis password and a long random JWT key.
+
+Both `.env` and `appsettings.Local.json` are listed in `.gitignore`.
+
 ### 1. Start infrastructure (Redis + Kafka)
 
 ```bash

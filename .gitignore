@@ -23,6 +23,7 @@ venv/
 # Environment / secrets
 .env
 *.env
+appsettings.Local.json
 
 # Logs
 *.log
